@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你好，LangChain！构建第一个对话机器人</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <h1>LangChain 对话机器人</h1>
+            </div>
+            <p class="subtitle">基于 LangChain 概念构建的智能对话助手</p>
+        </header>
+
+        <main class="chat-container" id="chatContainer">
+            <div class="welcome-message">
+                <div class="welcome-icon">👋</div>
+                <h2>欢迎使用 LangChain 对话机器人！</h2>
+                <p>我已经初始化了 LangChain 模型和对话链。现在可以开始多轮对话了。</p>
+                <div class="feature-list">
+                    <span class="feature-tag">✓ LLM 初始化完成</span>
+                    <span class="feature-tag">✓ ConversationChain 已创建</span>
+                    <span class="feature-tag">✓ 对话上下文已启用</span>
+                </div>
+            </div>
+        </main>
+
+        <div class="status-bar" id="statusBar">
+            <span class="status-indicator"></span>
+            <span id="statusText">就绪</span>
+        </div>
+
+        <footer class="input-area">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="输入你的问题..."
+                    autocomplete="off"
+                >
+                <button id="sendBtn" class="send-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-hints">
+                <span>按 Enter 发送</span>
+                <span>|</span>
+                <span id="tokenCount">0 字符</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
